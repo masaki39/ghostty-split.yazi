@@ -1,8 +1,6 @@
-local function get_cwd()
-	return ya.sync(function()
-		return tostring(cx.active.current.url)
-	end)()
-end
+local get_cwd = ya.sync(function()
+	return tostring(cx.active.current.cwd)
+end)
 
 return {
 	entry = function(self, job)
