@@ -13,6 +13,11 @@ return {
 				'tell application "Ghostty"\nset cfg to new surface configuration\nset initial working directory of cfg to "%s"\nnew tab in front window with configuration cfg\nend tell',
 				cwd
 			)
+		elseif action == "window" then
+			script = string.format(
+				'tell application "Ghostty"\nset cfg to new surface configuration\nset initial working directory of cfg to "%s"\nnew window with configuration cfg\nend tell',
+				cwd
+			)
 		else
 			script = string.format(
 				'tell application "Ghostty"\nset cfg to new surface configuration\nset initial working directory of cfg to "%s"\nset t1 to focused terminal of selected tab of front window\nsplit t1 direction %s with configuration cfg\nend tell',
