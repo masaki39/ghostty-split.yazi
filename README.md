@@ -18,19 +18,24 @@ ya pkg add masaki39/ghostty-split
 ```toml
 # keymap.toml
 [[mgr.prepend_keymap]]
-on = ["o", "t"]
+on = ["o", "l"]
 run = "plugin ghostty-split right"
 desc = "Open terminal split right"
 
 [[mgr.prepend_keymap]]
-on = ["o", "T"]
+on = ["o", "j"]
 run = "plugin ghostty-split down"
 desc = "Open terminal split down"
 
 [[mgr.prepend_keymap]]
-on = ["o", "n"]
+on = ["o", "t"]
 run = "plugin ghostty-split tab"
 desc = "Open terminal new tab"
+
+[[mgr.prepend_keymap]]
+on = ["o", "w"]
+run = "plugin ghostty-split window"
+desc = "Open terminal new window"
 ```
 
 | Arg | Action |
@@ -38,3 +43,4 @@ desc = "Open terminal new tab"
 | `right` | Split right (default) |
 | `down` | Split down |
 | `tab` | New tab |
+| `window` | New window |
